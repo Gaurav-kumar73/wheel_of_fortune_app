@@ -53,7 +53,7 @@ export default function Login() {
         // Store JWT securely
         await AsyncStorage.setItem('token', data.token);
         Alert.alert('Success', 'Login successful!');
-        router.push("/(screens)/(tabs)"); // Navigate to home screen
+        router.replace("/(screens)/(tabs)"); // Navigate to home screen
         
       } else {
         Alert.alert('Error', data.message || 'Login failed.');
